@@ -1,0 +1,176 @@
+Exc1.java
+
+import java.util.Scanner;
+public class Exc1 { 
+    public static void main(String[] args) {
+	String s;
+	Scanner dado = new Scanner(System.in);
+	System.out.printf("Digite uma palavra: ");
+	s = dado.next();
+	System.out.println(s);
+	System.out.println(s.subSequence(1,s.length()));
+	System.out.println(s.subSequence(0,s.length()-1));
+	System.out.println(s.length());
+	if (s.length() >= 7 ){
+	    System.out.println(s.subSequence(3,7));
+	}else{
+	    System.out.println("A palavra não possui 7 caracteres");
+	}
+        System.out.println(s.replace("e","&"));
+        System.out.println(s+"POO");
+    } 
+}
+
+
+
+Exc1Slide.java
+
+import java.util.Scanner;
+public class Exc1Slide { 
+    public static void main(String[] args) {
+	Scanner dado = new Scanner(System.in);
+	String nome1, nome2, nome3;
+	System.out.printf("Digite o nome 1: ");
+	nome1 = dado.next();
+        System.out.printf("Digite o nome 2: ");
+	nome2 = dado.next();
+	System.out.printf("Digite o nome 3: ");
+	nome3 = dado.next();
+	System.out.println(nome1+", "+nome3);
+	System.out.println(nome2);
+    } 
+}
+
+
+
+Exc2.java
+
+import java.util.Scanner;
+public class Exc2 { 
+    public static void main(String[] args) {
+	Scanner dado = new Scanner(System.in);
+	float total = 0;
+	for(int i = 0; i < 5; i++){
+	    System.out.printf("Digite o valor do produto "+(i+1)+": ");
+	    total += dado.nextFloat();
+	}
+        System.out.println("Total = "+total);
+    } 
+}
+
+
+
+Exc2Slide.java
+
+import java.util.Scanner;
+public class Exc2Slide { 
+    public static void main(String[] args) {
+	Scanner dado = new Scanner(System.in);
+	Float n1, n2;
+	System.out.printf("Digite o numero 1: ");
+	n1 = dado.nextFloat();
+        System.out.printf("Digite o numero 2: ");
+	n2 = dado.nextFloat();
+	System.out.println("Soma: "+ (n1+n2));
+	System.out.println("Produto: "+ (n1*n2));
+	System.out.println("Diferença: "+ (n1-n2));
+	System.out.println("Quociente: "+ (n1/n2));
+    }
+}
+
+
+
+Exc3.java
+
+import java.util.Scanner;
+public class Exc3 { 
+    public static void main(String[] args) {
+	Scanner dado = new Scanner(System.in);
+	double raio = 0;
+	System.out.printf("Digite o valor da largura do cilindro: ");
+	double largura = dado.nextDouble();
+	double doisPi = 6.28;
+	raio = largura / doisPi;
+        System.out.println("Raio= "+raio);
+    } 
+}
+
+
+
+Exc3Slide.java
+
+import java.util.Scanner;
+public class Exc3Slide { 
+    public static void main(String[] args) {
+	Scanner dado = new Scanner(System.in);
+	float total = 0;
+	for(int i = 0; i < 3 ;i++){
+	    System.out.printf("Digite o valor do produto "+(i+1)+": ");
+	    Float valor = dado.nextFloat();
+	    System.out.printf("Digite a quantidade do produto "+(i+1)+": ");
+	    Float quantidade = dado.nextFloat();
+	    total += (valor*quantidade);
+	}
+        System.out.println("O valor total entre os produtos é "+total+".");
+    } 
+}
+
+
+
+Exc4.java
+
+import java.util.Scanner;
+public class Exc4 { 
+    public static void main(String[] args) {
+	String s;
+	String resultado = "" ;
+	Scanner dado = new Scanner(System.in);
+	for(int i = 0;i < 3; i++){
+	    System.out.printf("Digite uma palavra: ");
+	    s = dado.next();
+	    resultado += s;
+	}
+	System.out.println(resultado);
+    } 
+}
+
+
+
+Exc4Slide.java
+
+import java.util.Scanner;
+public class Exc4Slide { 
+    public static void main(String[] args) {
+	Scanner dado = new Scanner(System.in);
+	System.out.printf("Digite a largura da piscina: ");
+	float largura = dado.nextFloat();
+	System.out.printf("Digite a profundidade da piscina: ");
+	float profundidade = dado.nextFloat();
+	System.out.printf("Digite o comprimento da piscina: ");
+	float comprimento = dado.nextFloat();
+	float area = comprimento * profundidade * largura;
+	System.out.println("A piscina terá "+area+" metros cúbicos e custará R$" + (area * 45)+".");
+    } 
+}
+
+
+
+Exc5.java
+
+import java.util.Scanner;
+public class Exc5 { 
+    public static void main(String[] args) {
+	String texto = "Olá, " ;
+	Scanner dado = new Scanner(System.in);
+	System.out.printf("Digite seu nome: ");
+	texto += dado.nextLine()+ ". Você tem ";
+	System.out.println("Qual sua idade?");
+	texto += dado.nextLine() + " anos e é natural de ";
+	System.out.println("Qual sua naturalidade?");
+	texto += dado.nextLine() + ".";
+	System.out.println(texto);
+    } 
+}
+
+
+
