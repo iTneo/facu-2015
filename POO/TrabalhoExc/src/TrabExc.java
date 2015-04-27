@@ -8,7 +8,6 @@ class LenghtErrorException extends RuntimeException{
 public class TrabExc {
 	public static void main(String[] args){
 		Scanner dados = new Scanner(System.in);
-		System.out.println("Qual seu CPF?");
 		try{
 			System.out.println("Qual seu CPF?");
 			String cpf = dados.next();
@@ -24,9 +23,11 @@ public class TrabExc {
 		}catch(LenghtErrorException e){
 			System.out.println(e.getMessage());
 		}catch(InputMismatchException e){
-			System.out.println("Sua idade precisa ser um numero inteiro!");
+			System.out.println("Os valores precisam ser um numeros inteiros!");
 		}catch(ArithmeticException e){
 			System.out.println("Impossível dividir por zero cartões!!!");			
+		}finally {
+			System.out.println("Encerrando sistema para esse cliente.");
 		}
 		
 	}
