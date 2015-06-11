@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# Script criado para automatizar o processo de lançamento 
+# e compilação da calculadora de números primos com threads.
+
 arquivo="pthreadPrimos"
 clear
 if [ "$1" == "--help" ];then
