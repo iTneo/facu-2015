@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
+from datetime import datetime
 
 # Variáveis estáticas
 OPCOES = ['receita', 'despesa', 'saldo']
@@ -33,7 +34,9 @@ while True:
 	    despesas += valor
 	    saldo -= valor
     else:
-	sys.stderr.write("Erro: Opção não válida!\n")
+		hora = datetime.now()
+		sys.stderr.write(hora.strftime("%H:%M - %d:%m:%Y - "))
+		sys.stderr.write("Erro: Opção não válida!\n")
 
 # Imprime resultados
 print str(saldo) + " reais de saldo"
