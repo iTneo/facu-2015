@@ -22,16 +22,16 @@ while True:
     if tipo_de_dados in OPCOES:
         valor = linha[1]
         if tipo_de_dados in ['saldo', 'receita']:
-	        if tipo_de_dados == 'saldo':
-		        saldo += float(valor.split(" ")[1])
-	        else:
-	            valor = float(valor.split(" ")[2])
-		        saldo += valor
-		        receita += valor
-	    else:
-	        valor = float(valor.split(" ")[2])
-	        despesas += valor
-	        saldo -= valor
+            if tipo_de_dados == 'saldo':
+                saldo += float(valor.split(" ")[1])
+            else:
+                valor = float(valor.split(" ")[2])
+                saldo += valor
+                receita += valor
+        else:
+            valor = float(valor.split(" ")[2])
+            despesas += valor
+            saldo -= valor
     else:
         hora = datetime.now()
         sys.stderr.write(hora.strftime("%H:%M - %d:%m:%Y - "))
