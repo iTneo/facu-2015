@@ -34,7 +34,7 @@ while True:
             saldo -= valor
     else:
         hora = datetime.now()
-        sys.stderr.write(hora.strftime("%H:%M - %d:%m:%Y - "))
+        sys.stderr.write(hora.strftime("%H:%M:%S - %d/%m/%Y - "))
         sys.stderr.write("Erro: Opção não válida!\n")
 
 # Imprime resultados
