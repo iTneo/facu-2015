@@ -8,9 +8,12 @@ from datetime import datetime
 OPCOES = ['receita', 'despesa', 'saldo']
 
 # Inicializar variáveis
-saldo=0
-receita=0
-despesas=0
+cont_linha = 1
+cont_receita = 0
+cont_despesa = 0
+saldo = 0
+receita = 0
+despesas = 0
 
 while True:
     try:
@@ -28,16 +31,21 @@ while True:
                 valor = float(valor.split(" ")[2])
                 saldo += valor
                 receita += valor
+                cont_receita += 1
         else:
             valor = float(valor.split(" ")[2])
             despesas += valor
             saldo -= valor
+            cont_despesa += 1
     else:
         hora = datetime.now()
         sys.stderr.write(hora.strftime("%H:%M:%S - %d/%m/%Y - "))
-        sys.stderr.write("Erro: Opção não válida!\n")
+        sys.stderr.write(str(cont_linha) + " - Erro: Opção não válida!\n")
+    
+    cont_linha += 1
+
 
 # Imprime resultados
 print str(saldo) + " reais de saldo"
-print str(despesas) + " reais de despesas"
-print str(receita) + " reais de receita"
+print "%.2f reais de despesas distribuídos em %d vezes" % (despesas, cont_despesa)
+print "%.2f reais de receita distribuídos em %d vezes" % (receita, cont_receita)
