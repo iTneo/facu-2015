@@ -22,7 +22,10 @@ if __name__ == '__main__':
 			linha = linha.split(';') 
 			mem_total = int(linha[0])
 			mem_usada = int(linha[1])
-			porcent = (mem_usada * 100) / mem_total
+			try:
+				porcent = (mem_usada * 100) / mem_total
+			except ZeroDivisionError:
+				porcent = 0
 			if i == 0:
 				fisica = porcent
 			elif i == 1:
